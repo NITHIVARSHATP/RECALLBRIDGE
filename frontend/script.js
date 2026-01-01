@@ -54,7 +54,7 @@ function handleGenerate() {
     return;
   }
 
-  setStatus("processing", "Calibrating cues");
+  setStatus("processing", "Reconstructing recall paths");
 
   window.requestAnimationFrame(() => {
     const cues = buildCues(rawText);
@@ -66,7 +66,7 @@ function handleGenerate() {
     }
 
     renderCues(cues);
-    setStatus("ready", cues.length < 5 ? "Anchors ready (add more for depth)" : "Anchors ready");
+    setStatus("ready", cues.length < 5 ? "Recall stabilized (add more for depth)" : "Recall stabilized");
   });
 }
 
