@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RecallBridge Panic Mode</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient"></div>
+  <div class="app" role="application">
+    <header class="hero" aria-labelledby="panic-heading">
+      <div class="hero-copy">
+        <span class="safety-badge" aria-label="Panic safe mode active">Panic safe</span>
+        <h1 id="panic-heading">RecallBridge Panic Mode</h1>
+        <p class="hero-subtitle">Ground quickly, focus the mind, and surface high-impact recall anchors when time and calm feel scarce.</p>
+      </div>
+      <div class="breath-card" aria-live="polite">
+        <h2>Breath cadence</h2>
+        <p id="breathPrompt">Inhale for four, hold for two, exhale for six.</p>
+        <button type="button" class="link-button" id="shuffleBreath">New cadence</button>
+      </div>
+    </header>
+
+    <main class="workspace" aria-describedby="input-helper">
+      <section class="panel input-panel" aria-label="Study content input">
+        <div class="section-heading">
+          <h2>Staging zone</h2>
+          <p id="input-helper">Paste source notes, exam briefs, or topic outlines. We will condense them into short panic cues.</p>
+        </div>
+        <label for="content" class="visually-hidden">Study content</label>
+        <textarea id="content" placeholder="Paste study notes or bullet points here..." spellcheck="false"></textarea>
+        <div class="actions">
+          <button type="button" class="primary" id="generateBtn">Generate panic cues</button>
+          <button type="button" class="secondary" id="clearBtn">Clear</button>
+        </div>
+        <p class="ai-note">AI will generate panic-safe anchors optimized for stressed recall.</p>
+      </section>
+
+      <section class="panel output-panel" aria-label="Recall anchors">
+        <div class="section-heading">
+          <h2>Recall anchors</h2>
+          <span class="status-badge idle" id="statusBadge">Awaiting input</span>
+        </div>
+        <p class="section-subtitle">We will surface up to five bite-sized cues you can read and breathe through in under ten seconds.</p>
+        <div id="output" class="cue-output empty" aria-live="polite" aria-atomic="true">
+          <div class="placeholder">
+            <h3>Nothing yet</h3>
+            <p>Paste notes and tap the panic button when you are ready.</p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="panel toolkit" aria-label="Grounding toolkit">
+        <div class="section-heading">
+          <h2>Grounding toolkit</h2>
+        </div>
+        <ul class="toolkit-list">
+          <li>
+            <span class="toolkit-title">4-2-6 Breath</span>
+            <span class="toolkit-note">Inhale 4, hold 2, exhale 6. Repeat twice before reading cues.</span>
+          </li>
+          <li>
+            <span class="toolkit-title">Label three facts</span>
+            <span class="toolkit-note">Name three things you already know about the topic before scanning new info.</span>
+          </li>
+          <li>
+            <span class="toolkit-title">Anchor the why</span>
+            <span class="toolkit-note">Link each cue to the exam question or objective to lock context.</span>
+          </li>
+        </ul>
+        <div class="quick-tip-card">
+          <div class="tip-header">
+            <h3>Quick tip</h3>
+            <button type="button" class="link-button" id="shuffleTip">New tip</button>
+          </div>
+          <p id="tipText">Take one slow sip of water before reviewing your cues.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer" aria-live="polite">
+      <small>You are safe. We will keep your recall sharp.</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
