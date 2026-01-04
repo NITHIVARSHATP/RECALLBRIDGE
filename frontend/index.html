@@ -33,6 +33,38 @@
         </div>
         <label for="content" class="visually-hidden">Study content</label>
         <textarea id="content" placeholder="Paste study notes or bullet points here..." spellcheck="false"></textarea>
+
+        <div class="input-controls" aria-label="Generation preferences">
+          <label for="panicLevelSelect">Panic level
+            <select id="panicLevelSelect" aria-label="Select panic level">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+          </label>
+
+          <label for="modeSelect">Mode
+            <select id="modeSelect" aria-label="Select study mode">
+              <option value="study">Study</option>
+              <option value="revise" selected>Revise</option>
+              <option value="exam">Exam</option>
+            </select>
+          </label>
+
+          <label for="languageSelect">Language
+            <select id="languageSelect" aria-label="Select output language">
+              <option value="en" selected>English</option>
+              <option value="ta">Tamil</option>
+              <option value="hi">Hindi</option>
+            </select>
+          </label>
+
+          <label class="one-breath-toggle">
+            <input type="checkbox" id="oneBreathToggle" aria-label="Enable one breath mode" />
+            <span>One-breath cue</span>
+          </label>
+        </div>
+
         <div class="actions">
           <button type="button" class="primary" id="generateBtn">Generate panic cues</button>
           <button type="button" class="secondary" id="clearBtn">Clear</button>
@@ -87,6 +119,15 @@
     </footer>
   </div>
 
+  <script>
+    window.RECALLBRIDGE_CONFIG = Object.assign(
+      {
+        apiUrl: "https://generatepaniccues-b4wgydhj4q-uc.a.run.app",
+        recaptchaSiteKey: "",
+      },
+      window.RECALLBRIDGE_CONFIG || {}
+    );
+  </script>
   <script src="script.js"></script>
 </body>
 </html>

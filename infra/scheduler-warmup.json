@@ -1,0 +1,13 @@
+{
+  "name": "projects/YOUR_PROJECT_ID/locations/YOUR_REGION/jobs/recallbridge-warmup",
+  "schedule": "0 * * * *",
+  "timeZone": "Etc/UTC",
+  "httpTarget": {
+    "uri": "https://generatepaniccues-b4wgydhj4q-uc.a.run.app",
+    "httpMethod": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "eyJ3YXJtdXAiOnRydWUsIm1vZGUiOiJ3YXJtdXAifQ=="
+  }
+}
