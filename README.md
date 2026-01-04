@@ -44,9 +44,6 @@ Question refinement is used as a **recovery mechanism**, not a chatbot feature.
 - Dialogflow / NLP – intent detection & question refinement
 - Google Cloud Vision OCR (optional) – handwritten note processing
 
-## Project Status
-🚧 Currently under active development (Hackathon build – 3 days)
-
 ## Planned MVP
 - Text input (study notes)
 - Panic-safe cue generation
